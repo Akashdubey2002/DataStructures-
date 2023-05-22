@@ -1,0 +1,49 @@
+import java.util.*;
+class Node{
+    Node next;
+    int data;
+    Node(int data){
+        this.data = data;
+        next = null;
+    }
+}
+class Main{
+    public static void main(String[] args) {
+        Node head = new Node(11);
+        Node temp1 = new Node(20);
+        Node temp2 = new Node(32);
+        Node temp3 = new Node(43);
+        Node temp4 = new Node(99);
+         Node temp5 = new Node(48);
+        head.next = temp1;
+        temp1.next = temp2;
+        temp2.next =  temp3;
+        temp3.next = temp4;
+        temp5.next = temp5;
+       System.out.println(loop(head));
+    }
+   static boolean loop(Node head){
+       Node temp = head;
+       HashSet <Integer> hast = new HashSet<>();
+       while(temp!=null){
+           if(hast.contains(temp.data))
+           {
+               return true;
+           }
+           else{
+               hast.add(temp.data);
+           }
+           temp = temp.next;
+       } return false;
+    }
+    
+    
+    static void print(Node head){
+        Node tempo = head;
+        while(tempo!=null){
+            System.out.println(tempo.data);
+            tempo = tempo.next;
+        }
+    }
+
+}
