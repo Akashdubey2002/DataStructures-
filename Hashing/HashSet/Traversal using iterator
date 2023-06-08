@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	 HashSet<Integer> h = new HashSet();
+	 h.add(19);
+	 h.add(23);
+	 h.add(24);
+	 System.out.println(h);
+	 Iterator<Integer> it = h.iterator();
+	 while(it.hasNext()){
+	     System.out.println(it.next());
+	 }
+	}
+}
