@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		HashMap<String,Integer> st = new HashMap<>();
+		st.put("akash",21);
+		st.put("muskan",21);
+		System.out.println(st);
+		for(Map.Entry<String,Integer>e : st.entrySet())
+		{
+		    System.out.println(e.getKey() + e.getValue());
+		}
+	}
+}
