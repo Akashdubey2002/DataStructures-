@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int arr1[] = {-3,2,2,4};
+	//int arr2[] = {2,36,19,12,255};
+	int sum = 0;
+	System.out.println(co(arr1,sum));
+	}
+	public static boolean co(int arr1[], int sum){
+	     
+	    HashSet<Integer> has = new HashSet<>();
+	     int  sums = 0;
+	    for(int ele:arr1){
+	     sums += ele;
+	       if(has.contains(sums))
+	           return true;
+	       else
+	       has.add(sum);
+	}
+	 return false;
+}}
