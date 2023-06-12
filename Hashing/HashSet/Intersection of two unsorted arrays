@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int arr1[] = {2,3,25,14,36,12,255};
+	int arr2[] = {2,36,12,255};
+	co(arr1,arr2);
+	}
+	public static void co(int arr1[], int arr2[]){
+	    
+	    HashSet<Integer> has = new HashSet<>();
+	    for(int ele:arr2){
+	        has.add(ele);
+	    }
+	    for(int ele:arr1){
+	        if(has.contains(ele))
+	         System.out.println(ele);   
+	    }
+	}
+}
