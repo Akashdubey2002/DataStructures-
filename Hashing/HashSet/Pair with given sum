@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	int arr1[] = {2,3,25,14,36,12,255};
+	//int arr2[] = {2,36,19,12,255};
+	int sum = 19;
+	co(arr1,sum);
+	}
+	public static void co(int arr1[], int sum){
+	    
+	    HashSet<Integer> has = new HashSet<>();
+	    for(int ele:arr1){
+	    if(has.contains(sum-ele)){
+	    System.out.println("true");
+	    break;}
+	    else{
+	        has.add(ele);
+	    }
+	}
+	    //System.out.println(false);
+	}
+}
+
+
+// here we need to verify first that element is there or  not else it would gove wrong answer im same case
