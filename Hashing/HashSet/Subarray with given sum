@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[] = {5,8,6,3,13,-1};
+		int cal = 22;
+		System.out.println(sum(arr,cal));
+	}
+	static boolean sum(int arr[],int cal){
+	    HashSet<Integer> has = new HashSet<>();
+	    int sums  = 0;
+	    
+	    for(int i=0;i<arr.length;i++){
+	        sums += arr[i];
+	        if(has.contains(sums-cal))
+	        return true;
+	        else {
+	           has.add(sums); 
+	        }
+	    }
+	    return false;
+	}
+}
